@@ -1,11 +1,11 @@
 .about-page { 
     width: 100%;
-    height:500px;
+    height:600px;
     background-color: aliceblue;
     position: relative;
     background-color:  #1b2036;;
-    display: flex;    justify-content: space-between;
-
+    display: flex;    
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
 }
@@ -23,9 +23,50 @@
 }
 
 .about-text-box { 
-    background-color: aquamarine;
+    background-color: rgb(64, 67, 97);
     height: 300px;
-    width: 40vw;
+    width: 50vw;
     position: relative;
-    bottom: 50px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    border-radius: 40px;
+    box-shadow: 5px 10px 10px #38383f;
 }
+
+.about-text-intro {
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    vertical-align: center;
+    font-size: 1.1em;
+    line-height: 1.6em;
+    letter-spacing: 0.8px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    gap:40px;
+}
+
+.about-text-intro button{ 
+    background-color: turquoise;
+    height: 40px;
+    width: 300px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8em;
+    color:black;
+    box-shadow: 2px 2px 5px #83838b;
+    min-height: 40px;
+
+}
+.animated-chess { 
+    width: 40%;
+    min-width: 200px;
+}
+
+.comp-text { 
+    color: rgb(0, 255, 221);
+}
+
