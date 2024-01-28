@@ -10,7 +10,7 @@ function Introduction() {
   var xwelcome = useTransform(scrollYProgress, [0, 1], [0, 1200]);
 
   return (
-    <section className="intro-page">
+    <section className="intro-page" id="Introduction">
         <div className="main-text">
             <motion.h1 style={{x: xname}} >Jason Setyadi</motion.h1>
             <motion.h2 style={{x: xwelcome}}>Welcome to my <span className='portfolio-text'>portfolio.</span></motion.h2>

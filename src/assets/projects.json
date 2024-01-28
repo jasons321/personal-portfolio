@@ -1,0 +1,58 @@
+[
+    {
+      "id": 1,
+      "name": "Reading Journal App",
+      "description": "As an avid reader, I often find that there aren't many journaling apps that are targeted specifically for reading. Hence, I built an app in Java that allows user to upload books/PDFs and journal on them with the app.",
+      "imageLink": "Screenshot 2024-01-10 234334.png",
+      "tags": ["Java", "MySQL", "Rest API"],
+      "github":"https://github.com/jasons321/Reading-Journal-App"
+    },
+    {
+        "id": 2, 
+        "name": "Water Level Sensor (Physics Project)",
+        "description": "To assist myself in the measurement of the velocity of water and its rate of change for a physics project, I made a device using Arduino to track the water level at a certain interval.",
+        "imageLink": "Screenshot 2024-01-10 234547.png",
+        "tags": ["Arduino"],
+        "github":"https://github.com/jasons321/Water-Level-Detector"
+    },
+    {
+        "id": 3, 
+        "name": "B2B E-Commerce site with an inventory management system",
+        "description": "One of my earliest and largest project which involves creating a web app that allows businesses to track inventory as well as let their clients purchase products directly on the website to ease communication.",
+        "imageLink": "Screenshot 2024-01-11 000541.png",
+        "tags": ["NodeJs", "ExpressJs", "MySql", "Rest API"],
+        "github":"https://github.com/jasons321/B2B-E-Commerce-Web-Application-Full-Stack-"
+    }, 
+    {
+        "id": 4, 
+        "name": "Tourism Website",
+        "description": "When I started to feel homesick, I created a website promoting tourism relating to my home country. The website has a built-in ticket price searching system, utilising a plane ticket API",
+        "imageLink": "Screenshot 2024-01-10 235215.png",
+        "tags": ["HTML", "CSS", "JavaScript"],
+        "github":"https://github.com/jasons321/Tourism-Website"
+    },
+    {
+        "id": 5, 
+        "name": "Mini Command Shell Written in C",
+        "description": "This command shell written in C has some standard linux functions (cd, grep, echo, etc), utilising principles such as piping and supports multiple commands",
+        "imageLink": "command-shell.jpg",
+        "tags": ["C"],
+        "github":"https://gitfront.io/r/jasons321/pohHonqPK5sW/mini-C-shell/"
+    },
+    {
+        "id": 6, 
+        "name": "Image Compression Using C",
+        "description": "For this project, I programmed several algorithms to compress images based on pixel values. Worked with low-level binary data as well as plain text.",
+        "imageLink": "monsalisa.jpg",
+        "tags": ["C"],
+        "github":"https://gitfront.io/r/jasons321/tFUVTWdZgi27/Image-Compression/"
+    }, 
+    {
+        "id": 7, 
+        "name": "Front-End Design",
+        "description": "Worked as a group to develop the front-end design for a video sharing app.",
+        "imageLink": "Screenshot 2024-01-10 235509.png",
+        "tags": ["C++", "Qt"],
+        "github":""
+    }
+]

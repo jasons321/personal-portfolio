@@ -1,13 +1,15 @@
 
 body {
   background-color: #09131a  ;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Tektur';
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  background-color:  #1b2036;;
+
 }
 
 

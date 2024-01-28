@@ -3,12 +3,13 @@ import React from 'react';
 import './about.css';
 import { motion } from "framer-motion"
 import chessPic from '../../assets/Screenshot_2024-01-07_001013-removebg-preview.png'
+import MyPDF from '../../assets/CV.pdf';    
 
 
 function About() {
 
   return (
-    <section className="about-page">
+    <section className="about-page" id="About">
         <h1 className="about-title">
           About
           <span className="me-text" >
@@ -45,7 +46,10 @@ function About() {
             the University of Leeds. I have a passion for applying 
             computer science and programming concepts to solve problems.
           <motion.button whileHover={{ scale: 1.05}}>
-            Download CV
+            <i className="gg-file-document"></i>
+            <a className="button" href={MyPDF} download="CV.pdf">
+              Download Resume
+            </a>
           </motion.button>
           </div>
         </div>

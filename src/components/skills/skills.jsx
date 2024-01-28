@@ -5,7 +5,7 @@ import './skills.css';
 
 function Skills() {
   return (
-    <section className="skills-page">
+    <section className="skills-page" id="Skills">
       <h1 className="skills-title">
         Skills
       </h1>
@@ -21,12 +21,34 @@ function Skills() {
           <div className="skills-collection">
             <div className="skills-card">
               <h2>Languages</h2>
+              <div className="skills-icons">
+                <i className="devicon-javascript-plain colored"></i>
+                <i class="devicon-java-plain"></i>
+                <i class="devicon-cplusplus-plain colored"></i>
+                <i class="devicon-c-plain colored"></i>
+                <i class="devicon-python-plain colored"></i>
+              </div>
             </div>
             <div className="skills-card">
               <h2>Frameworks</h2>
+              <div className="skills-icons">
+                <i class="devicon-qt-original colored"></i>
+                <i class="devicon-express-original-wordmark"></i>
+
+              </div>
             </div>
             <div className="skills-card">
               <h2>Others</h2>
+              <div className="skills-icons">
+                <i class="devicon-nodejs-plain-wordmark colored"></i>
+                <i class="devicon-canva-original colored"></i>
+                <i class="devicon-figma-plain colored"></i>
+                <i class="devicon-jupyter-plain-wordmark colored"></i>
+                <i class="devicon-mysql-plain-wordmark colored"></i>
+                <i class="devicon-react-original-wordmark colored"></i>
+                <i class="devicon-arduino-plain-wordmark colored"></i>
+
+              </div>
             </div>
           </div>
       </div>
