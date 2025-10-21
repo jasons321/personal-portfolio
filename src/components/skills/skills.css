@@ -1,17 +1,17 @@
 .skills-page { 
     width: 100%;
     position: relative;
-    background-color:  #1b2036;;
     display: flex;    
     align-items: center;
     flex-direction: column;
     align-content: flex-start;
+    font-family: montserrat, sans-serif;
 }
 
 .skills-box {
     position: relative;
     margin-top: 1em;
-    background-color: rgb(64, 67, 97);
+    background-color: 	#fffaf7;
     width: 70%;
     border-radius: 40px;
     padding: 5em;
@@ -27,7 +27,7 @@
     margin-top: 1em;
     margin-bottom: 1em;
     font-size: 3em;
-    color: turquoise;
+    color: #8ed1d1;
     position: relative;
 }
 
@@ -37,16 +37,17 @@
     font-size: 1.2rem;
     line-height: 1.7em;
     letter-spacing: 0.1em; 
-    font-weight: 600;
+    color: #636d6c;
+    font-weight: 500;
 }
 
 .proglang { 
-    color: turquoise;
+    color: 	#8ed1d1;
 }
 
 .skills-collection { 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-content: space-evenly;
     align-items: center;
     position: relative;
@@ -59,9 +60,9 @@
 .skills-card { 
     width: 100%;
     text-align: center;
-    background-color: rgb(40, 40, 63);
+    background-color: #dddddd;
     border-radius: 10px;
-    box-shadow: 2px 5px 5px #242427;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     display: flex;    
     flex-direction: column;
     align-content: flex-start;
@@ -70,7 +71,7 @@
 
 .skills-card h2 { 
     font-size: 1.5em;
-    color: rgb(247, 115, 137);
+    color: #636d6c;
     position: relative;
     top: 1.5em;
 }

@@ -4,8 +4,7 @@ import './about.css';
 import { motion } from "framer-motion"
 import chessPic from '../../assets/Screenshot_2024-01-07_001013-removebg-preview.png'
 import MyPDF from '../../assets/CV.pdf';    
-
-
+import Experience from '../about/timeline';
 function About() {
 
   return (
@@ -23,35 +22,38 @@ function About() {
           </motion.span>
         </h1>
         <div className="about-text-box">
-
+          <div className="about-text-chess-text">
             <motion.img 
-                initial={{
-                  transform: "translateY(10px)"
-                }}
-                animate={{
-                  transform: "translateY(-10px)"
-                }}
-                transition={{
-                  repeat:Infinity,
-                  duration:1, 
-                  ease:"easeInOut",
-                  repeatType:"mirror"
-                }}
-                className="animated-chess" 
-                src={chessPic} 
-                alt="Animated Chess" />
-          <div className="about-text-intro">
-            My name is Jason Setyadi, and I am currently a 
-            second-year computer science student studying at 
-            the University of Leeds. I have a passion for applying 
-            computer science and programming concepts to solve problems.
+                  initial={{
+                    transform: "translateY(10px)"
+                  }}
+                  animate={{
+                    transform: "translateY(-10px)"
+                  }}
+                  transition={{
+                    repeat:Infinity,
+                    duration:1, 
+                    ease:"easeInOut",
+                    repeatType:"mirror"
+                  }}
+                  className="animated-chess" 
+                  src={chessPic} 
+                  alt="Animated Chess" />
+            <div className="about-text-intro">
+              My name is Jason Setyadi, and I am currently a 
+              second-year computer science student studying at 
+              the University of Leeds. I have a passion for applying 
+              computer science and programming concepts to solve problems.
+            </div>
+          </div>
           <motion.button whileHover={{ scale: 1.05}}>
             <i className="gg-file-document"></i>
             <a className="button" href={MyPDF} download="CV.pdf">
               Download Resume
             </a>
           </motion.button>
-          </div>
+          <Experience />
+
         </div>
     </section>
   );

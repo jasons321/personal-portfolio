@@ -1,0 +1,15 @@
+.vertical-timeline-element-date {
+    font-size: 1.3rem !important;
+    line-height: 1.7em;
+    letter-spacing: 0.1em; 
+    color: #636d6c;
+    font-weight: 600 !important;
+}
+
+@media only screen and (max-width: 1150px) {
+    .vertical-timeline-element-date {
+        color: #ffffff;
+        font-size: 1rem !important;
+        opacity: 1 !important;
+    }
+}

@@ -1,29 +1,4 @@
-.swiper {
-    width: 100%;
-    height: 400px!important;
-    overflow: hidden;
-
-}
-
-.ReactFlipCard__container {
-    width: 100% !important;
-    height: 100% !important;
-}
-
-.ReactFlipCard__flipCard {
-    position: absolute;
-
-}
-
-.ReactFlipCard__flipCardBack {
-    position: absolute;
-}
-
-.swiper-wrapper {
-    height: 350px !important;
-}
-
-.project-page { 
+.education-page { 
     width: 100%;
     min-height: 400px;
     position: relative;
@@ -34,7 +9,7 @@
     font-family: montserrat, sans-serif;
 }
 
-.project-title {
+.education-title {
     font-size: 3rem;
     color: #8ed1d1;
     position: relative;
@@ -42,7 +17,7 @@
     margin-top: 1em;
 }
 
-.project-paragraph { 
+.education-paragraph { 
     max-width: 1100px;
     font-size: 1.2rem;
     line-height: 1.7em;
@@ -51,10 +26,10 @@
     font-weight: 500;
 }
 
-.project-text {
+.education-text {
 }
 
-.project-box {
+.education-box {
     position: relative;
     margin-top: 1em;
     background-color: #fffaf7;
@@ -68,7 +43,7 @@
     box-shadow: 5px 10px 10px #38383f;
 }
 
-.project-collection { 
+.education-collection { 
     padding-top: 30px;
     display: flex;
     position: relative;
@@ -79,7 +54,7 @@
 
 }
 
-.project-card { 
+.education-card { 
     display: flex;
     flex-direction: column;
     background-color: #dddddd;
@@ -90,18 +65,18 @@
     position: relative;
 }
 
-.project-card-inner {
+.education-card-inner {
     width: 100%;
     height: 100% !important;
     height: fit-content;
 }
-.project-card img { 
+.education-card img { 
     width: 100%;
     height: 10em;
     border-radius: 6px;
 }
 
-.project-card h2 { 
+.education-card h2 { 
     padding-left: 1rem;
     padding-right: 1em;
     color: #636d6c;
@@ -112,7 +87,7 @@
     max-height: 50px;
     overflow: hidden;
 }
-.project-card p { 
+.education-card p { 
     padding-left: 1em;
     padding-right: 1em;
     color: #636d6c;
@@ -157,35 +132,58 @@
     bottom: 0;
 }
 
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
 
-.github-button:hover {
-    background-color: 	#e8c7cf;
+.first-class {
+    background-color: #89E894;
 }
 
-.github-button a { 
-    color: rgb(20, 33, 104);
+.upper-second-class {
+    background-color:#D2FDBB;
+}
 
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    position: absolute;
-    text-align: center;
+.lower-second-class {
+    background-color: #e9edb6;
+}
+
+.education-tags {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    gap: 5rem; 
 }
 
-.github-button i { 
-    margin-right: 0.5em;
+.education-tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
 }
 
-@media (max-width: 500px) {
-    .project-card img { 
-        width: 100%;
-        height: 25em;
-        border-radius: 6px;
-        object-position: center;
+.education-courses { 
+    max-width: 1100px;
+    font-size: 1.2rem;
+    line-height: 1.7em;
+    letter-spacing: 0.1em; 
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-    }
-    
+.education-course {
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.7em;
+    letter-spacing: 0.1em; 
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 20px;
+    padding-left: 20px;
 }

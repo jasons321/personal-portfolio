@@ -4,6 +4,7 @@ import Introduction from './components/introduction/introduction';
 import About from './components/about/about';
 import Skills from './components/skills/skills';
 import Project from './components/projects/project';
+import Education from './components/education/education';
 
 import { motion } from "framer-motion";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
@@ -29,7 +30,7 @@ function App() {
             <motion.div
               initial={"offscreen"}
               whileInView={"onscreen"}
-              viewport={{once:false, amount:0.5}}
+              viewport={{once:false, amount:0}}
               transition={{staggerChildren:0.5}}         
               variants={imageAnimate}>
                 <About></About>
@@ -50,7 +51,14 @@ function App() {
               variants={imageAnimate}>
               <Project></Project>
             </motion.div>
-
+            <motion.div
+              initial={"offscreen"}
+              whileInView={"onscreen"}
+              viewport={{once:false, amount:0.2}}
+              transition={{staggerChildren:0.5}}         
+              variants={imageAnimate}>
+              <Education></Education>
+            </motion.div>
     </div>
   );
 }

@@ -1,5 +1,13 @@
 [
     {
+        "id": 8,
+        "name": "Real-time sensor data web application",
+        "description": "The project takes real-time sensor data sent to a server hosted in AWS and displays it in the front-end using a web socket connection. Allows care homes to ensure the safety of room occupants in a secure manner.",
+        "imageLink": "image.png",
+        "tags": ["React.js", "MaterialUI", "AWS"],
+        "github":"https://github.com/jasons321/care-home"
+      },
+    {
       "id": 1,
       "name": "Reading Journal App",
       "description": "As an avid reader, I often find that there aren't many journaling apps that are targeted specifically for reading. Hence, I built an app in Java that allows user to upload books/PDFs and journal on them with the app.",

@@ -23,7 +23,7 @@ function Skills() {
               <h2>Languages</h2>
               <div className="skills-icons">
                 <i className="devicon-javascript-plain colored"></i>
-                <i class="devicon-java-plain"></i>
+                <i class="devicon-java-plain-wordmark colored"></i>
                 <i class="devicon-cplusplus-plain colored"></i>
                 <i class="devicon-c-plain colored"></i>
                 <i class="devicon-python-plain colored"></i>
@@ -33,7 +33,8 @@ function Skills() {
               <h2>Frameworks</h2>
               <div className="skills-icons">
                 <i class="devicon-qt-original colored"></i>
-                <i class="devicon-express-original-wordmark"></i>
+                <i class="devicon-express-original-wordmark colored"></i>
+                <i class="devicon-dot-net-plain-wordmark colored"></i>
 
               </div>
             </div>

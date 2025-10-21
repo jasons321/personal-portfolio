@@ -1,19 +1,13 @@
 
 body {
-  background-color: #09131a  ;
-  font-family: 'Tektur';
-
+  font-family: montserrat, sans-serif;;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Hide horizontal scrollbar */
-  background-color:  #1b2036;;
-
+  background-color:  #636d6c;
+  padding-bottom: 40px;
+  
 }
 
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
