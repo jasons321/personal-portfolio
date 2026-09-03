@@ -13,7 +13,7 @@ function Introduction() {
     <section className="intro-page" id="Introduction">
         <div className="main-text">
             <motion.h1 style={{x: xname}} >Hello, I'm <span class="coloured-text ">Jason</span>.</motion.h1>
-            <motion.h2 style={{x: xwelcome}}>CS Student @ Uni of Leeds | Computer Science Student</motion.h2>
+            <motion.h2 style={{x: xwelcome}}>ACSE @ Imperial</motion.h2>
         </div>
     </section>
   );

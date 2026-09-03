@@ -1,65 +1,40 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Navbar from "./components/navbar"
-import Introduction from './components/introduction/introduction';
+import Navbar from './components/navbar';
+import Hero from './components/hero/Hero';
 import About from './components/about/about';
+import Experience from './components/experience/Experience';
 import Skills from './components/skills/skills';
-import Project from './components/projects/project';
+import Projects from './components/projects/Projects';
 import Education from './components/education/education';
+import BlogPreview from './components/blog/BlogPreview';
+import BlogList from './components/blog/BlogList';
+import BlogPost from './components/blog/BlogPost';
 
-import { motion } from "framer-motion";
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+function Home() {
+  return (
+    <main>
+      <Hero />
+      <About />
+      <Experience />
+      <Skills />
+      <Projects />
+      <Education />
+      <BlogPreview />
+    </main>
+  );
+}
 
 function App() {
-
-  const imageAnimate={
-      offscreen:{x:-100, opacity:0},
-      onscreen:{
-      x:0,
-      opacity:1,
-      rotate:[0,10,0],
-      transition: {type:"spring",
-      bounce:0.4,
-      duration:1}
-    }
-  }
-
   return (
-    <div>
-      <Navbar sticky="top"></Navbar>
-          <Introduction></Introduction>
-            <motion.div
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              viewport={{once:false, amount:0}}
-              transition={{staggerChildren:0.5}}         
-              variants={imageAnimate}>
-                <About></About>
-            </motion.div>
-            <motion.div
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              viewport={{once:false, amount:0.2}}
-              transition={{staggerChildren:0.5}}         
-              variants={imageAnimate}>
-              <Skills></Skills>
-            </motion.div>
-            <motion.div
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              viewport={{once:false, amount:0.2}}
-              transition={{staggerChildren:0.5}}         
-              variants={imageAnimate}>
-              <Project></Project>
-            </motion.div>
-            <motion.div
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              viewport={{once:false, amount:0.2}}
-              transition={{staggerChildren:0.5}}         
-              variants={imageAnimate}>
-              <Education></Education>
-            </motion.div>
-    </div>
+    <Router basename="/personal-portfolio">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<BlogList />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+      </Routes>
+    </Router>
   );
 }
 

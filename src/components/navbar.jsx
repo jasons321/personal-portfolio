@@ -1,90 +1,72 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import PropTypes from 'prop-types';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './navbar.css';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const SECTIONS = [
+  { label: 'About', id: 'about' },
+  { label: 'Experience', id: 'experience' },
+  { label: 'Skills', id: 'skills' },
+  { label: 'Projects', id: 'projects' },
+];
 
-const tabs = [
-  {
-      name: 'Home',
-      route: '#Introduction'
-  }, 
-  {
-      name: 'About',
-      route: '#About'
-  }, 
-  {
-      name: 'Skills',
-      route: '#Skills'
-  },
-  {
-      name: 'Projects',
-      route: '#Project'
-  },
-  {
-      name: 'Education',
-      route: '#Education'
-  }
-]
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
-function ElevationScroll(props) {
-  const { children } = props;
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 0,
-    target: props.window ? window() : undefined,
-  });
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
 
-  return children
-    ? React.cloneElement(children, {
-        elevation: trigger ? 24 : 0,
-      })
-    : null;
+  const scrollToSection = (id) => {
+    setMenuOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }, 150);
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
+      <nav className="navbar__inner">
+        <Link to="/" className="navbar__logo">JS</Link>
+
+        <ul className={`navbar__links${menuOpen ? ' navbar__links--open' : ''}`}>
+          {SECTIONS.map(({ label, id }) => (
+            <li key={id}>
+              <button className="navbar__link" onClick={() => scrollToSection(id)}>
+                {label}
+              </button>
+            </li>
+          ))}
+          <li>
+            <Link to="/blog" className="navbar__link">
+              Writing
+            </Link>
+          </li>
+        </ul>
+
+        <button
+          className={`navbar__hamburger${menuOpen ? ' navbar__hamburger--open' : ''}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </nav>
+    </header>
+  );
 }
-
-ElevationScroll.propTypes = {
-  children: PropTypes.element,
-};
-
-function Navbar(props) {
-
-    const [activeTab, setActiveTab] = useState(tabs[0].name)
-
-    const handleTabClick = (tabName) => {
-        setActiveTab(tabName);
-    };
-
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-    return (
-      <React.Fragment>
-        <ElevationScroll {...props}>
-          <AppBar  sx={{ bgcolor: 'rgba(99,109,108,0.5);', backdropFilter: 'blur(10px)'}}>
-            <Toolbar>
-              <ul> 
-                {tabs.map((tab) => (
-                    <li 
-                        key={tab.name}
-                        whileHover={{
-                            scale: 1.05,
-                        }}
-                        className={`tab ${activeTab === tab.name ? 'active' : ''}`}>
-                        <a href={tab.route}>{tab.name}</a>
-                    </li>
-                ))}
-              </ul>
-            </Toolbar>
-          </AppBar>
-        </ElevationScroll>
-        <Toolbar />
-      </React.Fragment>
-    );
-}
-
-export default Navbar;

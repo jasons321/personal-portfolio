@@ -1,39 +1,74 @@
-
-
-html{
-  font-size: 16px;
-}  
-
-@media screen and (max-width: 1200px) {
-  html {
-    font-size: 14px;
-  }
+.section {
+  padding: 6rem 2rem;
 }
 
-@media screen and (max-width: 1000px) {
-  html {
-    font-size: 13px;
-  }
+.section__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
-@media screen and (max-width: 750px) {
-  html {
-    font-size: 11px;
-  }
-
+.section__header {
+  margin-bottom: 3rem;
 }
 
-@media screen and (max-width: 600px) {
-  html {
-    font-size: 10px;
-  }
+.section__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-600);
+  margin-bottom: 0.5rem;
 }
 
-@media screen and (max-width: 500px) {
-  html {
-    font-size: 8px;
-  }
+.section__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--black);
 }
-  body { 
-    width: 100%;
-  }
+
+.section__divider {
+  width: 100%;
+  height: 1px;
+  background: var(--gray-200);
+  margin-top: 1.5rem;
+}
+
+/* Global button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  text-decoration: none;
+  transition: background-color var(--transition), color var(--transition),
+    transform var(--transition), box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+.btn--primary {
+  background-color: var(--black);
+  color: var(--white);
+  border: 2px solid var(--black);
+}
+
+.btn--primary:hover {
+  background-color: var(--gray-800);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--black);
+  border: 2px solid var(--gray-200);
+}
+
+.btn--outline:hover {
+  border-color: var(--black);
+  transform: translateY(-1px);
+}

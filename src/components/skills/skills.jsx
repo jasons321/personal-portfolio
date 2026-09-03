@@ -1,60 +1,69 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import './skills.css';
 
+const SKILLS = [
+  {
+    category: 'Languages',
+    items: ['JavaScript', 'Java', 'C#', 'Python', 'C++', 'C'],
+  },
+  {
+    category: 'Frameworks & Platforms',
+    items: ['React', '.NET', 'Node.js', 'Express.js', 'Qt', 'Playwright'],
+  },
+  {
+    category: 'Tools & Others',
+    items: ['MySQL', 'Git', 'Figma', 'Arduino', 'Jupyter', 'AWS', 'Canva'],
+  },
+];
 
-function Skills() {
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: i * 0.1 },
+  }),
+};
+
+export default function Skills() {
   return (
-    <section className="skills-page" id="Skills">
-      <h1 className="skills-title">
-        Skills
-      </h1>
-      <div className="skills-box">
-          <p className="skills-paragraph">
-            I have a varying level of familiarity with a multitude of programming languages, utilising them to 
-            solve problems of different nature. I am most comfortable with <span className="proglang">Java</span> as well as 
-            <span className="proglang"> JavaScript</span> and possess a solid understanding of 
-            <span className="proglang"> Object-oriented programming</span>. I  have also done projects 
-            with <span className="proglang">Python</span>,<span className="proglang"> C++</span>, and 
-            <span className="proglang"> C</span>.
-          </p>
-          <div className="skills-collection">
-            <div className="skills-card">
-              <h2>Languages</h2>
-              <div className="skills-icons">
-                <i className="devicon-javascript-plain colored"></i>
-                <i class="devicon-java-plain-wordmark colored"></i>
-                <i class="devicon-cplusplus-plain colored"></i>
-                <i class="devicon-c-plain colored"></i>
-                <i class="devicon-python-plain colored"></i>
-              </div>
-            </div>
-            <div className="skills-card">
-              <h2>Frameworks</h2>
-              <div className="skills-icons">
-                <i class="devicon-qt-original colored"></i>
-                <i class="devicon-express-original-wordmark colored"></i>
-                <i class="devicon-dot-net-plain-wordmark colored"></i>
+    <section className="section skills" id="skills">
+      <div className="section__inner">
+        <motion.div
+          className="section__header"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          custom={0}
+        >
+          <p className="section__label">What I work with</p>
+          <h2 className="section__title">Skills</h2>
+          <div className="section__divider" />
+        </motion.div>
 
+        <div className="skills__grid">
+          {SKILLS.map((group, gi) => (
+            <motion.div
+              key={group.category}
+              className="skills__group"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              custom={gi}
+            >
+              <h3 className="skills__category">{group.category}</h3>
+              <div className="skills__items">
+                {group.items.map((skill) => (
+                  <span key={skill} className="skill-tag">{skill}</span>
+                ))}
               </div>
-            </div>
-            <div className="skills-card">
-              <h2>Others</h2>
-              <div className="skills-icons">
-                <i class="devicon-nodejs-plain-wordmark colored"></i>
-                <i class="devicon-canva-original colored"></i>
-                <i class="devicon-figma-plain colored"></i>
-                <i class="devicon-jupyter-plain-wordmark colored"></i>
-                <i class="devicon-mysql-plain-wordmark colored"></i>
-                <i class="devicon-react-original-wordmark colored"></i>
-                <i class="devicon-arduino-plain-wordmark colored"></i>
-
-              </div>
-            </div>
-          </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
-
-export default Skills;
